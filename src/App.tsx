@@ -3,8 +3,8 @@ import "./App.css";
 
 export default function Page() {
   const [noCount, setNoCount] = useState(0);
-  const [yesPressed, setYesPressed] = useState(false);
-  const yesButtonSize = noCount * 20 + 16;
+  const [okayPressed, setokayPressed] = useState(false);
+  const okayButtonSize = noCount * 20 + 16;
 
   const handleNoClick = () => {
     setNoCount(noCount + 1);
@@ -24,7 +24,7 @@ export default function Page() {
       "You're breaking my heart ;(",
       "pretty please",
       "i am going to die",
-      "yup im dead".
+      "yup im dead",
       "un vettuku vanthuduvan",
       "No :(",
     ];
@@ -35,9 +35,9 @@ export default function Page() {
   return (
     <div className="centered-container">
       <div className="valentine-container">
-        {yesPressed ? (
+        {okayPressed ? (
           <>
-            <img src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif" />
+            <img src="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif" />
             <div className="text-container">Ok yay!!!</div>
           </>
         ) : (
@@ -45,14 +45,16 @@ export default function Page() {
             <img
               className="h-[200px]"
               style={{ width: "400x", height: "240px" }}
-              src="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif"
+              src=""
             />
-            <h1 className="text-container">Will you be my Valentine?</h1>
+            <h1 className="text-container">
+              I'm sorry for not being able to speak :(
+            </h1>
             <div>
               <button
-                className={"yes-button"}
-                style={{ fontSize: yesButtonSize }}
-                onClick={() => setYesPressed(true)}
+                className={"okay-button"}
+                style={{ fontSize: okayButtonSize }}
+                onClick={() => setokayPressed(true)}
               >
                 Yes
               </button>
